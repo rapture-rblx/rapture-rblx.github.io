@@ -110,6 +110,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 @media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal button,.gal button:nth-child(n){grid-column:span 1;aspect-ratio:4/3}.gal button:nth-child(1){grid-column:span 2}}
 .gal.quad button,.gal.quad button:nth-child(n){grid-column:span 3;aspect-ratio:16/10}
 @media(max-width:700px){.gal.quad button,.gal.quad button:nth-child(n){grid-column:span 1;aspect-ratio:4/3}}
+.gal.tri button,.gal.tri button:nth-child(n){grid-column:span 2;aspect-ratio:1/1}
+@media(max-width:700px){.gal.tri button,.gal.tri button:nth-child(n){grid-column:span 1;aspect-ratio:4/3}.gal.tri button:nth-child(3){grid-column:span 2}}
 .sub{margin-top:90px;padding-top:70px;border-top:1px solid var(--line)}
 .sub h3{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
 .sub .lead{margin-bottom:0}
@@ -166,8 +168,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <h3>Scripts</h3><p>Luau scripting for game systems, features and tools that run reliably in live servers.</p>
       <div class="chips"><span class="chip">Luau</span><span class="chip">Game systems</span><span class="chip">Roblox Studio</span></div></div>
     <div class="card reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></div>
-      <h3>Map building</h3><p>Full roleplay maps with roads, highways, cities and airports. See Orlando State Roleplay <a href="#orlando" style="color:var(--accent)">below</a>.</p>
-      <div class="chips"><span class="chip">Roleplay maps</span><span class="chip">Roads &amp; cities</span><span class="chip">Roblox Studio</span></div></div>
+      <h3>Map building</h3><p>Roleplay maps, interiors and terrain, from highways and airports to asylum interiors and desert bases. See my <a href="#orlando" style="color:var(--accent)">below</a>.</p>
+      <div class="chips"><span class="chip">Roleplay maps</span><span class="chip">Interiors</span><span class="chip">Terrain</span><span class="chip">Roblox Studio</span></div></div>
   </div>
 </div></section>
 
@@ -200,6 +202,32 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <button><img src="assets/orl-highway.jpg" alt="Highway interchange and forest in Orlando State Roleplay"><span>Highway interchange</span></button>
       <button><img src="assets/orl-city.jpg" alt="City intersection with shops and a gas station"><span>City streets</span></button>
       <button><img src="assets/orl-airport.jpg" alt="Airport runway and hangars"><span>The airport</span></button>
+    </div>
+  </div>
+  <div class="sub" id="asylum">
+    <div class="reveal">
+      <span class="status done">Built by me</span>
+      <h3>Harold Hill Asylum</h3>
+      <p class="lead">Interior builds I made for Harold Hill Asylum: a clearance checkpoint with scanner gates and queue barriers, a hospital room, and a containment chamber with a central pit. Dark, green-lit and tense.</p>
+      <div class="roles"><span class="chip">Interior building</span><span class="chip">Lighting</span><span class="chip">Roblox</span></div>
+    </div>
+    <div class="gal tri" id="gal3">
+      <button><img src="assets/asylum-clearance.jpg" alt="Clearance checkpoint with scanner gates"><span>Clearance checkpoint</span></button>
+      <button><img src="assets/asylum-medical.jpg" alt="Hospital room with a bed and monitors"><span>Medical room</span></button>
+      <button><img src="assets/asylum-containment.jpg" alt="Containment chamber with a central pit and railing"><span>Containment chamber</span></button>
+    </div>
+  </div>
+  <div class="sub" id="desert-wars">
+    <div class="reveal">
+      <span class="status done">Built by me</span>
+      <h3>Desert Wars</h3>
+      <p class="lead">A desert war map I built, with a river valley and lake, a walled compound with watchtowers, a military base camp with helicopters, and tree-covered hills.</p>
+      <div class="roles"><span class="chip">Map building</span><span class="chip">Terrain</span><span class="chip">Roblox</span></div>
+    </div>
+    <div class="gal tri" id="gal4">
+      <button><img src="assets/desert-compound.jpg" alt="Walled compound beside a lake in the desert"><span>Compound by the lake</span></button>
+      <button><img src="assets/desert-camp.jpg" alt="Military base camp with helicopters beside the river"><span>Base camp</span></button>
+      <button><img src="assets/desert-hills.jpg" alt="Desert hills with trees under a bright sun"><span>The hills</span></button>
     </div>
   </div>
 </div></section>
