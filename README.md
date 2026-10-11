@@ -108,6 +108,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .gal button:hover img{transform:scale(1.05)}
 .gal span{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-size:.82rem;font-weight:500;text-align:left;background:linear-gradient(transparent,rgba(0,0,0,.78))}
 @media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal button,.gal button:nth-child(n){grid-column:span 1;aspect-ratio:4/3}.gal button:nth-child(1){grid-column:span 2}}
+.gal.quad button,.gal.quad button:nth-child(n){grid-column:span 3;aspect-ratio:16/10}
+@media(max-width:700px){.gal.quad button,.gal.quad button:nth-child(n){grid-column:span 1;aspect-ratio:4/3}}
+.sub{margin-top:90px;padding-top:70px;border-top:1px solid var(--line)}
+.sub h3{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+.sub .lead{margin-bottom:0}
 .concept{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:30px}
 .concept div{padding:18px;border-radius:14px;border:1px solid var(--line);background:var(--card)}
 .concept b{font:600 1rem var(--display);display:block;margin-bottom:4px;color:var(--accent)}
@@ -139,7 +144,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <header class="hero" id="top"><div class="wrap">
   <div class="tag"><b>rapture-rblx</b> · Roblox developer</div>
   <h1>Sound, scripts &amp; <em>worlds</em> for Roblox.</h1>
-  <p>I'm Daniel, the developer behind Rapture Studios. I make soundtracks, sound effects and game scripts for Roblox experiences.</p>
+  <p>I'm Daniel, the developer behind Rapture Studios. I make soundtracks, sound effects, game scripts and maps for Roblox experiences.</p>
   <div class="btns">
     <a class="btn primary" href="#games">See my games</a>
     <a class="btn" href="#bloomville-music">Listen to soundtracks</a>
@@ -160,6 +165,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <div class="card reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
       <h3>Scripts</h3><p>Luau scripting for game systems, features and tools that run reliably in live servers.</p>
       <div class="chips"><span class="chip">Luau</span><span class="chip">Game systems</span><span class="chip">Roblox Studio</span></div></div>
+    <div class="card reveal"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></div>
+      <h3>Map building</h3><p>Full roleplay maps with roads, highways, cities and airports. See Orlando State Roleplay <a href="#orlando" style="color:var(--accent)">below</a>.</p>
+      <div class="chips"><span class="chip">Roleplay maps</span><span class="chip">Roads &amp; cities</span><span class="chip">Roblox Studio</span></div></div>
   </div>
 </div></section>
 
@@ -178,6 +186,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <div class="ph"><span>Bloomville soundtrack</span><span>4 tracks</span></div>
         <div id="tracks"></div>
       </div>
+    </div>
+  </div>
+  <div class="sub" id="orlando">
+    <div class="reveal">
+      <span class="status done">Built by me</span>
+      <h3>Orlando State Roleplay</h3>
+      <p class="lead">A state roleplay map I built myself. It has highways and interchanges, a red truss rail bridge over the water, city streets with shops and a gas station, and an airport with a runway and hangars.</p>
+      <div class="roles"><span class="chip">Map building</span><span class="chip">Roleplay</span><span class="chip">Roblox</span></div>
+    </div>
+    <div class="gal quad" id="gal2">
+      <button><img src="assets/orl-bridge.jpg" alt="Red truss rail bridge over the water in Orlando State Roleplay"><span>The rail bridge</span></button>
+      <button><img src="assets/orl-highway.jpg" alt="Highway interchange and forest in Orlando State Roleplay"><span>Highway interchange</span></button>
+      <button><img src="assets/orl-city.jpg" alt="City intersection with shops and a gas station"><span>City streets</span></button>
+      <button><img src="assets/orl-airport.jpg" alt="Airport runway and hangars"><span>The airport</span></button>
     </div>
   </div>
 </div></section>
@@ -254,7 +276,7 @@ audio.ontimeupdate=()=>{if(cur<0)return;const r=rows[cur];r.querySelector("i").s
 
 // gallery lightbox
 const lb=document.getElementById("lb"),lbi=lb.querySelector("img"),lbp=lb.querySelector("p");
-document.querySelectorAll("#gal button").forEach(b=>b.onclick=()=>{const im=b.querySelector("img");lbi.src=im.src;lbi.alt=im.alt;lbp.textContent=b.querySelector("span").textContent;lb.classList.add("open")});
+document.querySelectorAll(".gal button").forEach(b=>b.onclick=()=>{const im=b.querySelector("img");lbi.src=im.src;lbi.alt=im.alt;lbp.textContent=b.querySelector("span").textContent;lb.classList.add("open")});
 lb.onclick=e=>{if(e.target!==lbi)lb.classList.remove("open")};
 addEventListener("keydown",e=>{if(e.key==="Escape")lb.classList.remove("open")});
 
